@@ -19732,10 +19732,15 @@ var render = function() {
           "button",
           {
             staticClass:
-              "inline-flex items-center bg-gray-200 border-0 py-1 px-3 focus:outline-none hover:bg-gray-300 rounded text-base mt-4 md:mt-0"
+              "inline-flex items-center bg-gray-200 border-0 py-1 px-3 focus:outline-none hover:bg-gray-300 rounded text-base mt-4 md:mt-0",
+            on: {
+              click: function() {
+                return _vm.$router.push("/auth/login")
+              }
+            }
           },
           [
-            _vm._v("Button\n            "),
+            _vm._v("Login\n            "),
             _c(
               "svg",
               {
@@ -19816,81 +19821,88 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "w-full max-w-xs" }, [
-      _c(
-        "form",
-        { staticClass: "bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" },
-        [
-          _c("div", { staticClass: "mb-4" }, [
-            _c(
-              "label",
-              {
-                staticClass: "block text-gray-700 text-sm font-bold mb-2",
-                attrs: { for: "username" }
-              },
-              [_vm._v("\n                Username\n            ")]
-            ),
+    return _c(
+      "div",
+      { staticClass: "flex justify-center flex-col items-center" },
+      [
+        _c(
+          "form",
+          {
+            staticClass: "bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4",
+            staticStyle: { width: "500px" }
+          },
+          [
+            _c("div", { staticClass: "mb-4" }, [
+              _c(
+                "label",
+                {
+                  staticClass: "block text-gray-700 text-sm font-bold mb-2",
+                  attrs: { for: "username" }
+                },
+                [_vm._v("\n                Username\n            ")]
+              ),
+              _vm._v(" "),
+              _c("input", {
+                staticClass:
+                  "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+                attrs: { id: "username", type: "text", placeholder: "Username" }
+              })
+            ]),
             _vm._v(" "),
-            _c("input", {
-              staticClass:
-                "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
-              attrs: { id: "username", type: "text", placeholder: "Username" }
-            })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "mb-6" }, [
-            _c(
-              "label",
-              {
-                staticClass: "block text-gray-700 text-sm font-bold mb-2",
-                attrs: { for: "password" }
-              },
-              [_vm._v("\n                Password\n            ")]
-            ),
+            _c("div", { staticClass: "mb-6" }, [
+              _c(
+                "label",
+                {
+                  staticClass: "block text-gray-700 text-sm font-bold mb-2",
+                  attrs: { for: "password" }
+                },
+                [_vm._v("\n                Password\n            ")]
+              ),
+              _vm._v(" "),
+              _c("input", {
+                staticClass:
+                  "shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline",
+                attrs: {
+                  id: "password",
+                  type: "password",
+                  placeholder: "******************"
+                }
+              }),
+              _vm._v(" "),
+              _c("p", { staticClass: "text-red-500 text-xs italic" }, [
+                _vm._v("Please choose a password.")
+              ])
+            ]),
             _vm._v(" "),
-            _c("input", {
-              staticClass:
-                "shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline",
-              attrs: {
-                id: "password",
-                type: "password",
-                placeholder: "******************"
-              }
-            }),
-            _vm._v(" "),
-            _c("p", { staticClass: "text-red-500 text-xs italic" }, [
-              _vm._v("Please choose a password.")
+            _c("div", { staticClass: "flex items-center justify-between" }, [
+              _c(
+                "button",
+                {
+                  staticClass:
+                    "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline",
+                  attrs: { type: "button" }
+                },
+                [_vm._v("\n                Sign In\n            ")]
+              ),
+              _vm._v(" "),
+              _c(
+                "a",
+                {
+                  staticClass:
+                    "inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800",
+                  attrs: { href: "#" }
+                },
+                [_vm._v("\n                Forgot Password?\n            ")]
+              )
             ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "flex items-center justify-between" }, [
-            _c(
-              "button",
-              {
-                staticClass:
-                  "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline",
-                attrs: { type: "button" }
-              },
-              [_vm._v("\n                Sign In\n            ")]
-            ),
-            _vm._v(" "),
-            _c(
-              "a",
-              {
-                staticClass:
-                  "inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800",
-                attrs: { href: "#" }
-              },
-              [_vm._v("\n                Forgot Password?\n            ")]
-            )
-          ])
-        ]
-      ),
-      _vm._v(" "),
-      _c("p", { staticClass: "text-center text-gray-500 text-xs" }, [
-        _vm._v("\n        ©2020 Acme Corp. All rights reserved.\n    ")
-      ])
-    ])
+          ]
+        ),
+        _vm._v(" "),
+        _c("p", { staticClass: "text-center text-gray-500 text-xs" }, [
+          _vm._v("\n        ©2020 Acme Corp. All rights reserved.\n    ")
+        ])
+      ]
+    )
   }
 ]
 render._withStripped = true
