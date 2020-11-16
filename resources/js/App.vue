@@ -1,7 +1,9 @@
 <template>
     <div>
-        <Header />
-        <router-view></router-view>
+        <div v-if="initiated">
+            <Header />
+            <router-view @onUserChanged="updateUser"></router-view>
+        </div>
     </div>
 </template>
 
@@ -9,7 +11,28 @@
     import Header from "./components/Header";
     export default {
         name: "App",
-        components: {Header}
+        components: {Header},
+        data: () => {
+            return {
+                initiated: false,
+                user:null
+            }
+        },
+        mounted() {
+            this.init()
+        },
+        methods: {
+            async init(){
+                const {data} = await axios.get('/auth/init');
+                this.user = data.user;
+                this.initiated = true;
+            },
+
+            updateUser(user){
+                console.log(user);
+                this.user = user;
+            }
+        }
     }
 </script>
 
