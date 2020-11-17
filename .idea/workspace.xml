@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7acc48d3-d52d-4890-9e1d-e47def40e300" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/js/pages/Register.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/laravel_8_and_vue_auth.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravel_8_and_vue_auth.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/pages/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/Login.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/router/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/router/router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/Register.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/Register.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,7 +176,8 @@
       <option name="presentableId" value="Default" />
       <updated>1605368399306</updated>
       <workItem from="1605368402220" duration="937000" />
-      <workItem from="1605369421170" duration="18625000" />
+      <workItem from="1605369421170" duration="19395000" />
+      <workItem from="1605540019757" duration="2627000" />
     </task>
     <servers />
   </component>

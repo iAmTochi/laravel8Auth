@@ -2239,7 +2239,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       name: "",
       username: "",
       password: "",
-      error: {}
+      error: {},
+      successMessage: ""
     };
   },
   methods: {
@@ -2279,20 +2280,26 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
                 _this.$emit("onUserChanged", response.data.user);
 
-                _context.next = 17;
+                name: "";
+
+                username: "";
+
+                password: "";
+
+                _context.next = 20;
                 break;
 
-              case 14:
-                _context.prev = 14;
+              case 17:
+                _context.prev = 17;
                 _context.t0 = _context["catch"](7);
                 console.log(_context.t0);
 
-              case 17:
+              case 20:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, null, [[7, 14]]);
+        }, _callee, null, [[7, 17]]);
       }))();
     }
   }

@@ -39,7 +39,8 @@
                 name: "",
                 username: "",
                 password: "",
-                error: {}
+                error: {},
+                successMessage: "",
             }
         },
         methods: {
@@ -61,6 +62,7 @@
                 try {
                     const response = await axios.post("/auth/register", data)
                     this.$emit("onUserChanged", response.data.user);
+
                 } catch (e) {
                     console.log(e);
                 }

@@ -25,6 +25,12 @@ class AuthController extends Controller
     }
 
     public function register(Request $request){
+        $rules = [
+            'name'  => 'required',
+            'username' => 'required|unique:users',
+            'password' => 'required',
+        ];
+        $this->validate($request, $rules);
         $user = new User();
 
         $user->name = $request->name;
@@ -34,6 +40,9 @@ class AuthController extends Controller
 
         Auth::login($user);
 
-        return ["user" => $user];
+        return response()->json([
+            "user" => $user,
+            "message" => $request->name. ", you are welcome!"
+        ], 200);
     }
 }

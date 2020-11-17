@@ -40,6 +40,7 @@
                 password: "",
                 error: {},
                 generalError: ""
+
             }
         },
         methods: {
